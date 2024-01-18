@@ -8,18 +8,56 @@ $header-bg-col: #111111;
     background-size: cover;
     background-position: center;
     transition: all 0.3s ease;
+    position: relative;
+}
+
+.jobcard-image:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0); /* No darkening initially */
+    transition: background 0.3s ease;
 }
 
 .jobcard-text {
     opacity: 0;
     transition: opacity 0.3s ease;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
+.jobcard-text h2 {
+    font-size: 1.5rem; /* Adjust this value as needed */
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center; /* Ensure text is centered */
+    color: white; /* Text color */
+    font-weight: bold; /* Font weight */
+    display: flex;
+    justify-content: center;
+    line-height: 1.2;
+
+}
 
 .jobcard-image:hover .jobcard-text {
     opacity: 1;
     
+}
+
+.card {
+    min-height: 250px; /* Adjust this value as needed */
+    /* Rest of your styles */
+}
+
+.jobcard-image:hover:before {
+    background: rgba(0, 0, 0, 0.5); /* Darken the image by 50% */
 }
 
 .navbar {
@@ -31,6 +69,27 @@ $header-bg-col: #111111;
     background:transparent;
     /* Add other styling as needed */
 }
+
+.title-img {
+    width: auto;
+    max-width: 100%;
+    max-height: 300px;
+}
+
+.logo-home-button {
+    width: 150px; /* Adjust the size as needed */
+    height: 100%; /* Maintains aspect ratio */
+    cursor: pointer; /* Changes cursor to indicate it's clickable */
+}
+
+/* Example of a media query for responsiveness */
+@media (max-width: 768px) {
+    .logo-home-button {
+        width: 80px; /* Smaller size for smaller screens */
+    }
+}
+
+
 
 @import "header-block";
 @import "fontawesome";

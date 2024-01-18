@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include head.html %}
+  <head>
+    {% include head.html %}
+  </head>
   <body>
-      {% include header.html %}
+    {% include navbar.html %}
         {{ content }}
       {% include footer.html %}
+
+      
+      <script src="/assets/js/smooth-scroll.js"></script>
   </body>

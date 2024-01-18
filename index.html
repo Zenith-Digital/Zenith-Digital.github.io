@@ -1,6 +1,51 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: default
+title: Zenith Digital
 ---
+
+<div id="full-page-block">
+    <div class="header-block">
+        <h1>
+          <span class="site-title">Zenith Digital</span>
+          <span class="site-description"> Digital Solutions Engineering for Unreal Engine </span>
+        </h1>
+
+        <br />
+    </div>
+    
+    <a class="down" href="#aboutpage" data-scroll>
+        <i class="icon fa fa-chevron-down" aria-hidden="true"></i>
+    </a>
+
+</div>
+
+<!-- Spacer to Move content below the big box -->
+<div class="container" style="margin-top: 100vh;"> </div>
+
+<div id="aboutpage" class="container">
+    {% include about.html %}
+</div>
+
+<div class="container py-4">
+    <hr class="border border-primary border-3 opacity-75">
+    <h2> Daniel Orchard - Founder & Developer </h2>
+    <figure class="alert alert-secondary">
+        <blockquote class="blockquote">
+            <p>
+                As the founder and lead developer of Zenith Digital, I bring over <strong>12 years</strong> of personal experience in Unreal Engine development to the table.
+                This journey, rich in diverse projects across film, TV, and broadcast, is showcased in the gallery below. 
+                While Zenith Digital is a new venture, it is built on the solid foundation of my extensive experience.
+            </p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+            <cite title="Source Title">Daniel Orchard. Founder</cite>
+        </figcaption>
+    </figure>
+
+    <h4 class="fst-italic"> The following projects were worked on by Daniel Orchard, and in no way related to Zenith Digital: </h4>
+    
+    {% include casestudy.html %}
+</div>
+
+
+

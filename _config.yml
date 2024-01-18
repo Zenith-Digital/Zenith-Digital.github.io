@@ -1,36 +1,24 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+
+# Site Config
 
 title: Zenith Digital
-email: web@danielorchard.com
+email: hello@zenith-digital.co.uk
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Zenith Digital, steered by a director with extensive experience in film, 
+  TV, broadcast, and theatre, excels in Unreal Engine technology. 
+  We offer custom solutions that transform stories through advanced real-time rendering and visual effects.
+  Our commitment to personalized service, adaptable to each unique project, 
+  ensures a focus on innovation, excellence, and captivating storytelling. 
+  Zenith Digital stands at the forefront of evolving digital narratives, 
+  skillfully handling everything from cutting-edge 
+  theatrical productions to groundbreaking television series.
+
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "" # the base hostname & protocol for your site, e.g. http://zenith-digital.co.uk
 twitter_username: 
 github_username:  zenith-digital
 
-# Build settings
-theme: minima
+
 plugins:
   - jekyll-feed
 

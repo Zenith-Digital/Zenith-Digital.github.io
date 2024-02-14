@@ -1,6 +1,18 @@
 - title: Home
   url: '/'
-- title: Work
+  is_header: false
+- title: Past Projects
   url: '/work/'
+  is_header: false
 - title: Contact
   url: '/contact/'
+  is_header: false
+- title: Community
+  url: 
+  is_header: true
+- title: Tutorials
+  url: /Tutorials/
+  is_header: false
+- title: Unreal Marketplace
+  url: /Tutorials/
+  is_header: false

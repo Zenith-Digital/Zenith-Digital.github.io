@@ -2,19 +2,16 @@
 <html lang="en data-bs-theme="dark">
 {% include head.html %}
   <body>
-  <!-- {% include navbar.html %} -->
+    <main class="d-flex flex-nowrap">
+      {% include sidebar.html %}
+      <div class="container-fluid wrapper">
+        {{ content }}
+      </div>
+    </main>
 
-  <main class="d-flex flex-nowrap">
-    {% include sidebar.html %}
-    <div class="container-fluid">
-      {{ content }}
-    </div>
-    
-  </main>
-
-  <div class="container-fluid px-0">
+  <footer class="container-fluid px-0">
     {% include footer.html %}
-  </div>
+  </footer>
 
   </body>
 </html>

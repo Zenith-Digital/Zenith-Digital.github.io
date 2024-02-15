@@ -17,6 +17,18 @@ main {
     min-height: 100vh;
 }
 
+section {
+    display: block;
+}
+
+.section {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+}
+
+
+
 // Title Card Logo on Main Page
 .title-img {
     width: auto;
@@ -34,10 +46,10 @@ li {
 }
 
 
-
 @import "header-block";
 @import "fontawesome";
 @import "sidebar";
 @import "bootstrap-icons.css";
 @import "roboto-font";
 @import "job-cards";
+@import "portfolio.scss";

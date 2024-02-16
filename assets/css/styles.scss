@@ -19,14 +19,19 @@ main {
 
 section {
     display: block;
-}
-
-.section {
-    width: 100%;
-    float: left;
     overflow: hidden;
 }
 
+
+.section {
+    width: 100%;
+    float: left;   
+}
+
+.progress-bar {
+    /* Apply a transition to the width property, change 2s to the desired duration */
+    transition: width 2s ease;
+}
 
 
 // Title Card Logo on Main Page

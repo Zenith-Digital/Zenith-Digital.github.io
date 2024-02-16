@@ -4,133 +4,199 @@ layout: default
 title: Dan O
 ---
 
-<div class="container py-0">
-    <h1 id="title" class="display-4"> About Me </h1>
-    <hr class="bg-primary">
+<!-- Page Wrapper -->
+<div class="container py-0 pb-4 mb-4">
+    <section data-aos="zoom-in">
+        <h1 id="title" class="display-4"> About Me </h1>
+        <hr class="bg-primary">
+    </section>
 
-    <h3 class="text-dark"> Who am I? What do I do? </h3>
-    <p> I'm Daniel, I work as an Unreal Engine developer, with a strong knowledge of all Unreal Engine systems, but with a focus on problem solvings and logic through C++, Blueprint and Editor Scripting. </p>
-    <p> I work on most mediums in Unreal, inc extensive work in Virtual Production for Film & TV, Headset based VR and AR, and video games. </p>
-    <p> I am currently working as a freelancer. </p>
+    <section data-aos="fade-up">
+        <h2 class="display-6"> Who am I? What do I do? </h2>
+        <p> I'm Daniel, I'm a Unreal Engine specialist, with a strong knowledge of all Unreal Engine systems, but
+            with a focus on problem solvings, logic, and new oppertunities through C++, Blueprint and Editor Scripting.
+        </p>
+        <p>
+            I like to work on new solutions and techniques to speed up workflows, support new features and data-types,
+            automate and streamline tasks, and help support teams with best-practices and helpful guidance.
+        </p>
+        <p> I work with most output mediums in Unreal, including extensive work in Virtual Production, XR development, video games, media and broadcast, and live-events </p>
 
-    <h3 class="text-dark"> Artist or Developer? </h3>
-    <p> Just here for clarity, I'm absolutely not an artist. 100% a developer. </p>
+        <p> I have a strong background in Performance Capture, which is additional knowledge I can bring as needed. </p>
+
+        <p> I am currently running Zenith Digital, offering Unreal Engine development services. </p>
+    </section>
+
+    <section data-aos="fade-up">
+        <h2 class="display-6"> Artist or Developer? </h2>
+        <p> Just here for clarity, I'm absolutely not an artist. 100% a developer. </p>
+    </section>
+
+    <!-- {% assign current_year = 'now' | date: '%Y' %}
+    {% assign years_since_2012 = current_year | minus: 2012 %}
+    X is {{ years_since_2012 }} years. -->
 
 
-    <h3 class="text-dark"> What Experience do I have? </h3>
-    <p> I have been working in Industry for a decade now, and using Unreal Engine for slightly more than that. In that time I have worked across film & TV, video games, theatre and more. </p>
-    <p> I initially started with <span class="text-warning"> UDK </span>, where I found the passion for game development, then started using <span class="text-warning"> Unreal Engine 4.6 </span> in industry in 2012, and used Unreal Engine practically every work day since.  </p>
+    <section data-aos="fade-up">
+        <h2 class="display-6"> What Experience do I have? </h2>
+        <p> I have been working in Industry since <strong>2012</strong>, and using Unreal Engine for longer than that. In
+            that time I have worked across film & TV, video games, theatre and more. </p>
+        <p> I initially started with <span class="text-info"> UDK </span>, where I found the passion for game
+            development, then started using <span class="text-info"> Unreal Engine 4.6 </span> in industry in 2012, for realtime visualisation of performance capture,
+            and used Unreal Engine practically every work day since. </p>
+    </section>
 
-    <!-- <h3 class="text-dark"> What software can I use? </h3>
-    <p> My main focus is Epic Games Unreal Engine, but along with that comes many side skills required to fully complete tasks. Quick incomplete list:
+    <section data-aos="fade-up">
+        <h2 class="display-6"> What software can I use? </h2>
+        <p> My main focus is Epic Games Unreal Engine, but along with that comes many side skills required to fully
+            complete tasks. Quick incomplete list: </p>
+
+        <!-- 2 Loops to do first half then second -->
+        <div class="container">
+            <div class="row">
+                {% assign half_size = site.data.skills | size | divided_by: 2 %}
+                <div class="col-md-6">
+                    {% for skill in site.data.skills limit: half_size %}
+                    <div class="skill mb-3">
+                        {{ skill.Skill }} <span class="float-end">{{ skill.Value }}%</span>
+                        <div class="progress" data-aos="fade-right">
+                            <div class="progress-bar bg-info role=" progressbar" style="width: {{ skill.Value }}%;"
+                                aria-valuenow="{{ skill.Value }}" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="col-md-6">
+                    {% for skill in site.data.skills offset: half_size %}
+                    <div class="skill mb-3">
+                        {{ skill.Skill }} <span class="float-end">{{ skill.Value }}%</span>
+                        <div class="progress" data-aos="fade-right">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: {{ skill.Value }}%;"
+                                aria-valuenow="{{ skill.Value }}" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section data-aos="fade-up">
+        <h2 class="display-6"> Unreal Engine Skillset </h2>
         <ul>
-            <li> Unreal Engine </li>
-            <li> 3DS Max </li>
-            <li> Maya </li>
-            <li> Substance Painter </li>
-            <li> Visual Studios </li>
-            <li> Visual Studios Code </li>
-            <li> Adobe Photoshop </li>
-            <li> Adobe Premier Pro </li>
-            <li> Adobe After Effects </li>
-            <li> Vicon Blade and Tracker </li>
-            <li> MVN XSens </li>
+            <li> <strong class="text-info"> Blueprint: </strong> 
+                Gameplay logic, procedural designs, optimisation, event driven gameplay, data driven gameplay </li>
+            <li> <strong class="text-info"> C++: </strong> 
+                Unreal Engine API, Efficient programming, blueprint libraries, script-exposure, Slate UI, JSON </li>
+            <li> <strong class="text-info"> Plugin Development: </strong> (Custom logic, Modularity) </li>
+            <li> <strong class="text-info"> Lighting: </strong> (Baked, Dynamic, Hybrid, Scenarios - Not a lighting designer, however) </li>
+            <li> <strong class="text-info"> Behaviour Trees and EQS: </strong> (AI Programming general level. Not a specialist AI Programmer) </li>
+            <li> <strong class="text-info"> Materials: </strong> Setup and creation, automation tooling, parametarisation </li>
+            <li> <strong class="text-info"> Multiplayer, Networking: </strong> Working knowledge </li>
+            <li> <strong class="text-info"> Cascade / Niagara: </strong> Working knowledge </li>
+            <li> <strong class="text-info"> Audio Engine: </strong> Working knowledge </li>
         </ul>
-    </p> -->
+    </section>
 
-    <!-- <h3 class="text-dark"> What Programming/Scripting/Data-interchange Languages can I use? </h3>
+    <section data-aos="fade-up">
+        <h2 class="display-6"> Past Employment (More Details Below) </h2>
         <ul>
-            <li> <span class="text-warning"> C++  (Unreal Engine API) </span> </li>
-            <li> <span class="text-warning"> Unreal Engine Blueprint - Runtime & Editor Scripting </span> </li>
-            <li> <span class="text-warning"> Python </span> </li>
-            <li> <span class="text-warning"> Data Interchange (JSON & YAML) </span> </li>
-            <li> <span class="text-warning"> Basic Web Development </span> </li>
-        </ul> -->
-
-    <h3 class="text-dark"> What Unreal Engine Techniques can I use? </h3>
-    <ul>
-        <li> <span class="text-info"> Blueprint </span> (Gameplay logic, procedural designs, maximising efficiency, event driven gameplay, data driven gameplay) </li>
-        <li> <span class="text-info"> C++ </span> (Base classes, Efficient programming, blueprint libraries, script-exposure, Slate UI creation, JSON) </li>
-        <li> <span class="text-info"> Plugin Development </span> (Custom logic, Slate UI) </li>
-        <li> <span class="text-info"> Lighting </span> (Baked, Dynamic, Hybrid) </li>
-        <li> <span class="text-info"> Behaviour Trees and EQS </span> (AI Behaviour - Good working knowledge but not a specialist) </li>
-        <li> <span class="text-info"> Materials </span> </li>
-        <li> <span class="text-info"> Multiplayer, Networking </span> </li>
-        <li> <span class="text-info"> Basic Cascade / Niagara </span> </li>
-        <li> <span class="text-info"> Audio </span> (Still learning the new Audio Engine features) </li>
-    </ul>
-
-    <h3 class="text-dark"> Past Employment (More Details Below) </h3>
-    <ul>
-        <li> Freelance Developer (2021 - Now) </li>
-        <li> The Royal Shakespeare Company - Lead Developer (2019 - 2021) </li>
-        <li> The Third Floor Inc - Senior Technical Developer (2017 - 2019) </li>
-        <li> The Imaginarium Studios - Technical Developer (2012 - 2017) </li>
-    </ul>
-
-    <h3 class="text-dark"> Where have I worked? </h3>
-    <p>
-        I started work in the industry at <span class="text-warning">The Imaginarium Studios </span>, in 2012, where I worked for almost six years on a large number of fantastic projects. I was focused mainly on performance capture, and utilising game engines to further the motion capture industry. 
-        I worked on lots of games, films, TV shows, music videos, and other miscellaneous projects there. Since the Imaginarium was a fairly small company, myself and my very talented colleagues covered many roles to ensure projects were the best they could be,
-        and allowed me to gain many useful skills not limited to a single role. Epic did a great write-up of the work myself and others did on the Tempest which can be viewed here, 
-        <a href="https://www.unrealengine.com/en-US/blog/unreal-engine-brings-virtual-character-to-life-onstage-in-the-royal-shakespeare-companys-the-tempest" _target="blank"> Unreal Engine Brings Virtual Character to Life Onstage in The Royal Shakespeare Company’s The Tempest </a>. 
-        There is also a white-paper on motion capture, featuring much of the work on the Tempest, here, 
-        <a href="https://cdn2.unrealengine.com/Unreal+Engine%2Fperformance-capture-whitepaper-final%2FUnreal-Engine_performance-capture-whitepaper_LPC_Whitepaper_final-7f4163190d9926a15142eafcca15e8da5f4d0701.pdf" _target="blank"> Choosing a real-time performance capture system. </a>
-    </p>
-
-    <p>
-        From June 2017, I started working at <span class="text-warning">The Third Floor Inc </span>, London branch. The Third Floor specialises in Pre-Visualisation, and I worked within the R&D department to develop Unreal Engine tools and pipelines to facilitate it's adoption in the film pipeline. 
-        This included new virtual production tools utilising virtual reality and augmented reality to bring a new dimension to the virtual production toolkit. I have also assisted the Immersive department on many occasions in developing more experimental or XR related projects, 
-        including production of their own game, <a href="https://www.madfactoryvr.com/" target="_blank"> Mad Factory VR</a>. 
-        The VR tools that I created at the Third Floor have received a great write-up by Epic Games, and can be viewed here:  
-        <a href="https://www.unrealengine.com/en-US/spotlights/virtual-production-on-the-battlegrounds-of-game-of-thrones" target="_blank">  Game of Thrones Previz using Unreal Engine 4 </a>  
-    </p>    
-   
-    <p>
-        From September 2019, I started work at <span class="text-warning">The Royal Shakespeare Company </span> as the Lead Developer for their Audiences of the Future project. This project is ongoing and more details will be revealed as it becomes publicly available. 
-    </p>
-
-    <h3 class="text-dark"> Have I got any tutorials? </h3>
-    <p>
-        Yes! I have a mix of tutorials, the short tutorials and snippets are free, and the full courses are just a few £ on Udemy:
-    </p>
-    <ul>
-        <li><a href="https://www.udemy.com/user/daniel-orchard-2/" target="_blank"> Full Courses </a> </li>
-        <li><a href="#" class="text-danger" target="_blank"> <strike> Short Lessons </strike> </a> -Coming Soon </li>
-        <li><a href="#" class="text-danger" target="_blank"> <strike> Snippets and Tips </strike> </a> -Coming Soon</li>
-    </ul>
-
-    <h3 class="text-dark"> Do I sell any content? </h3>
-    <p> I have been using some development time to produce high-end assets for the Unreal Marketplace. As I have been doing Unreal for quite some time its a great platform to grow a portfolio of products. I try to maintain a high bar for quality, and keep 
-        the assets up to date as the engine matures. I have also found it's another area which is great for learning new features </p>
-        <ul>
-            <li> <a href="https://www.unrealengine.com/marketplace/en-US/profile/Aperture9"> Unreal Engine Marketplace </a> </li>
+            <li> (2023 - Present) Founded Zenith Digital </li>
+            <li> (2021 - Present) Freelance Developer </li>
+                <ul>
+                    {% assign link-style="btn btn-info btn-sm" %}
+                    <li> Collaboration with <a class="{{link-style}}" target="_blank" href="https://www.fraystudio.com/">FRAY Studios <i class="bi bi-box-arrow-up-right"></i> </a> </li>
+                    <li> Collaboration with <a class="{{link-style}}" target="_blank" href="https://superstrange.tv/"> Super Strange Studios <i class="bi bi-box-arrow-up-right"></i> </a> </li>
+                    <li> Collaboration with <a class="{{link-style}}" target="_blank" href="https://ammonite.ltd/">Ammonite <i class="bi bi-box-arrow-up-right"></i></a> </li>
+                    <li> Collaboration with <a class="{{link-style}}" target="_blank" href="https://discoverysports.com/page/about-warner-bros-discovery-sports"> Warner Bros Discovery <i class="bi bi-box-arrow-up-right"></i></a> </li>
+                    <li> Collaboration with <a class="{{link-style}}" target="_blank" href="https://www.rsc.org.uk/">Royal Shakespeare Company <i class="bi bi-box-arrow-up-right"></i> </a> </li>
+                </ul>
+            <li> (2019 - 2021) Lead Unreal Engine Developer for <a target="_blank" class="{{link-style}}" href="https://www.rsc.org.uk/"> The Royal Shakespeare Company <i class="bi bi-box-arrow-up-right"></i> </a> </li>
+            <li> (2017 - 2019) Senior Technical Developer for <a target="_blank" class="{{link-style}}" href="https://thethirdfloorinc.com/">The Third Floor Inc<i class="bi bi-box-arrow-up-right"></i> </a> </li>
+            <li> (2012 - 2017) Technical Developer for <a target="_blank" class="{{link-style}}" href="https://www.imaginariumstudios.co.uk/">The Imaginarium Studios <i class="bi bi-box-arrow-up-right"></i></a></li>
         </ul>
+    </section>
 
-    <h3 class="text-dark"> Personal Projects </h3>
-    <p> 
-        I love learning and developing my own content, the more challenging the more I will learn, and so the more I enjoy it. I am currently working on three different game-based projects, one in VR the other two traditional games, one of which is multiplayer. 
-    </p>
-    <ul>
-        <li> <span class="text-warning"> Ash </span>, a multiplayer magical exploration and puzzle game, utilising Gameplay Framework </li>
-        <li> <span class="text-warning"> Spies </span>, a VR stealth simulator where you infiltrate locations to complete a primary objective. Game has a almost complete prototype now, just AI logic needs work </li>
-        <li> <span class="text-warning"> Solo </span>, a survival base building experience, designed to be very challenging, with a strong customisation system for designing your very own makeshift stronghold. </li>
-    </ul>
+    <section data-aos="fade-up">
+        <h2 class="display-6"> Detailed Work History </h2>
+        <p>
+            I started work in the industry at <span class="text-info">The Imaginarium Studios </span>, in 2012, where
+            I worked for almost six years on a large number of fantastic projects. I was focused mainly on performance
+            capture, and utilising game engines to further the motion capture industry.
+            I worked on lots of games, films, TV shows, music videos, and other miscellaneous projects there. Since the
+            Imaginarium was a fairly small company (at the time), myself and my very talented colleagues covered many roles to ensure
+            projects were the best they could be, and allowed me to gain many useful skills not limited to a single role. 
+        </p>
+        <p>
+            I took on my first lead development role in 2016 for The Royal Shakespeare Company's "The Tempest".  
+            I progreammed the engine and worked with an incredibly talented character artist, and expert character rigger to build Ariel in their many forms for the live production.
+            Epic did a great write-up of the work myself and others did on  which can be viewed here: 
+            <a href="https://www.unrealengine.com/en-US/blog/unreal-engine-brings-virtual-character-to-life-onstage-in-the-royal-shakespeare-companys-the-tempest"
+            _target="blank"> Unreal Engine Brings Virtual Character to Life Onstage in The Royal Shakespeare Company’s The Tempest <i class="bi bi-box-arrow-up-right"></i> </a>.
 
-    <p> 
-        <span class="text-warning"> The Vault </span>. I have been working on this for quite some time. The Vault is a Unreal Engine tool to let you submit, browse, and load assets from a centralized location. Its useful for an individual to trade assets between projects, but its real benefit is for flexible teams
-        that move between projects a bit more regularly than traditional games departments. Film, TV, and Arch-Vis are key targets who will benefit from this. Being able to fully set up your asset, materials, blueprints, meshes etc, then submit it to the vault, then having easy access to this
-        for you and the entire team from the vault loader in any project should make project prototypes faster than ever before. It also stores a plethora of metadata, and a thumbnail for ease of finding what you need. You can see a work-in-progress example at <a href="http://unrealvault.co.uk" target="_blank"> The Vault </a>
-    </p>
+            There is also a white-paper on motion capture, featuring much of the work on the Tempest, here,
+            <a href="https://cdn2.unrealengine.com/Unreal+Engine%2Fperformance-capture-whitepaper-final%2FUnreal-Engine_performance-capture-whitepaper_LPC_Whitepaper_final-7f4163190d9926a15142eafcca15e8da5f4d0701.pdf"
+                _target="blank"> Choosing a real-time performance capture system. </a>
+        </p>
 
-    <h3 class="text-dark"> Hobbies </h3>
-    <p> 
-        Outside of development, which I do spend a lot of time on, I love to grab my DSLR and explore through photography. I'm also an avid gamer across all platforms, and I particularly love to explore indie games, to support the developers and research 
-        what others are making.
-    </p>
-    <p> I also host a Discord server, both in support of my own products that are for sale, and for general community help, which has over 300 members </p>
+        <p>
+            From June 2017, I started working at <span class="text-info">The Third Floor Inc </span>, London branch.
+            The Third Floor specialises in Pre-Visualisation, and I worked within the R&D department to develop Unreal
+            Engine tools and pipelines to facilitate it's adoption in the film pipeline.
+            This included new virtual production tools utilising virtual reality and augmented reality to bring a new dimension to the virtual production toolkit. 
+            I also assisted the Immersive department in technical implementations for developing more experimental or XR related projects, 
+            including production of their own game, <a href="https://www.madfactoryvr.com/" target="_blank"> Mad Factory
+                VR <i class="bi bi-box-arrow-up-right"></i></a>.
 
+            The XR tools that I created at the Third Floor have received a great write-up by Epic Games, and can be
+            viewed here:
+            <a href="https://www.unrealengine.com/en-US/spotlights/virtual-production-on-the-battlegrounds-of-game-of-thrones"
+                target="_blank"> Game of Thrones Previz using Unreal Engine 4 <i class="bi bi-box-arrow-up-right"></i></a>
+        </p>
+        <p>
+            From September 2019, I started work at <span class="text-info">The Royal Shakespeare Company </span> as the Lead Developer for the 
+            <a href="https://audienceofthefuture.live/dream/">Audiences of the Future <i class="bi bi-box-arrow-up-right"></i></a> project. 
 
+            I took charge on the Unreal Engine technical development, and working with support from the web team, art team, and various other departments, we captured a live performance each night, utilising performance capture, 
+            to bring bespoke digital characters to life. Each performance was unique, with dynamic user-input from the collective audience shaping the performance. 
+            Mass audience interaction, via the web, into Unreal Engine, amalgamated into usable data, drove visual effects, and real-world lighting to direct performers and make each nights performance a unique experience.
+            A custom cue system, initially tiggered via traditional lighting desk, and routed via Unreal Engine, drove the show in a theatre style setup, but with very new oppertunities. 
+            A fully dynamic audio system, driven by <a href="https://reactionalmusic.com/"> Gestrument (Now Reactional Music) </a> powered dynamic sound landscapes with beautiful unique music each night. 
+        </p>
+    </section>
 
+    <section data-aos="fade-up">
+        <h2 class="display-6"> I teach <a class="btn btn-info" href="https://www.udemy.com/user/daniel-orchard-2/" target="_blank"> Udemy <i class="bi bi-box-arrow-up-right"></i></a> </h2>
+        <p>
+            I have a mix of tutorials, most can be found on 
+        </p>
+    </section>
+
+    <section data-aos="fade-up">
+        <h2 class="display-6"> I sell some helpful content <a class="btn btn-info" href="https://www.unrealengine.com/marketplace/en-US/profile/Aperture9"> Unreal Engine Marketplace </a> </h2>
+        <p> I have been using some development time to produce high-end assets for the Unreal Marketplace. As I have
+            been doing Unreal for quite some time its a great platform to grow a portfolio of products. I try to
+            maintain a high bar for quality, and keep
+            the assets up to date as the engine matures. I have also found it's another area which is great for learning
+            new features and skills I have yet to master </p>
+    </section>
+
+    <section data-aos="fade-up">
+        <h2 class="display-6"> Personal Projects </h2>
+        <p>
+            I love learning and developing my own content, the more challenging the more I will learn, and so the more I
+            enjoy it. Time is always a constraint, but when I can, I love to work on new game ideas and projects. I can't wait to share more as these ideas develop.
+        </p>
+    </section>
+
+    <section data-aos="fade-up">
+        <h2 class="display-6"> Hobbies </h2>
+        <p>
+            Outside of development, which I do spend a lot of time on, I love to grab my DSLR and explore through
+            photography. I'm also an avid gamer across all platforms, and I particularly love to explore indie games, to
+            support the developers and research what others are making.
+        </p>
+        <p> I also host a Discord server, both in support of my own products that are for sale, and for general
+            community help, which has over 300 members </p>
+    </section>
 </div>
-

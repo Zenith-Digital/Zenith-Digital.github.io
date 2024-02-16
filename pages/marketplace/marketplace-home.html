@@ -1,0 +1,53 @@
+---
+layout: default
+permalink: /marketplace/
+title: UE5 Marketplace
+---
+
+
+
+<div class="container py-3 px-0">
+
+    <div class="text-white">
+        <h1 class="text-muted"> Aperture9 Unreal Engine Marketplace </h1>
+        <h3 class="text-muted"> <a href="https://www.unrealengine.com/marketplace/en-US/profile/Aperture9" target="_blank" class=""> Unreal Marketplace </a></h3>
+    </div>
+
+
+{% for item in site.data.marketplace_items %}
+<div class="container px-0 my-4 py-2"> 
+ 
+   <div class="card">
+     <div class="row no-gutters">
+   
+       <!-- Picture -->
+       <div class="col">
+         <img src="{{item.thumb_img}}" class="card-img" alt="...">
+         <ul class="list-unstyled d-flex">
+             <li class="w-100 me-1"> <a href="{{ item.store_link }}" class="w-100 btn btn-lg btn-primary my-1" target="_blank"> Store Page </a> </li>
+
+             {% if item.show_docs_link %}
+             <li class="w-100 ms-1">  <a href="{{ item.docs_link }}" class="w-100 btn btn-lg btn-primary my-1" target="_blank"> Documentation </a> </li>
+             {% endif %}
+         </ul>
+         
+        
+       </div>
+       
+       <!-- Body -->
+       <div class="col-md-8">
+         <div class="d-flex flex-column">
+           <h5 class="card-title"> {{ item.title }} </h5>
+           <p class="card-text"> {{ item.description }} </p>
+         </div>
+       </div>
+   
+     </div> <!--Close Row -->
+   </div>
+ </div>
+ {% endfor %}
+
+
+
+
+</div> <!-- Master wrapper -->

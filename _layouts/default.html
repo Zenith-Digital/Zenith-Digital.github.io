@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html lang="en data-bs-theme="dark">
+<html lang="en data-bs-theme=" dark">
 {% include head.html %}
-  <body>
-    <main class="d-flex flex-nowrap">
-      {% include sidebar.html %}
-      <div class="container-fluid wrapper">
-        {{ content }}
-      </div>
-    </main>
 
-  <footer class="container-fluid px-0">
+<body>
+  {% include sidebar.html %}
+  <main class="flex-grow-1">
+    <div class="container-fluid px-0">
+      {{ content }}
+  </main>
+
+
+  <footer class="px-0 p-0">
     {% include footer.html %}
   </footer>
+  </div>
 
-  </body>
+  {% include scripts.html %}
+</body>
+
 </html>

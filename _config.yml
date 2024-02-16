@@ -14,7 +14,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   theatrical productions to groundbreaking television series.
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://zenith-digital.co.uk
+url: "https://zenith-digital.co.uk" # the base hostname & protocol for your site, e.g. http://zenith-digital.co.uk
 twitter_username: 
 github_username:  zenith-digital
 

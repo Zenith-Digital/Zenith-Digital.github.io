@@ -15,17 +15,12 @@ html, body {
 
 main {
     min-height: 100vh;
+    margin-left: 280px;
 }
 
 section {
     display: block;
     overflow: hidden;
-}
-
-
-.section {
-    width: 100%;
-    float: left;   
 }
 
 .progress-bar {
@@ -45,10 +40,7 @@ li {
     margin-bottom: 10px; /* Adjust the value as needed */
 }
 
-.fotter-icon {
-    width: 40px; /* Adjust the size as needed */
-    height: 100%; /* Maintains aspect ratio */
-}
+
 
 
 @import "header-block";
@@ -58,3 +50,4 @@ li {
 @import "roboto-font";
 @import "job-cards";
 @import "portfolio.scss";
+@import "footer"

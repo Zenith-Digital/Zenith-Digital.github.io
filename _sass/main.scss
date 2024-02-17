@@ -1,0 +1,63 @@
+---
+---
+
+// Apply Roboto font to all elements
+body, h1, h2, h3, h4, h5, h6, p, a, button, input, select, textarea, .navbar, .dropdown, .modal, .carousel {
+    font-family: $font-family-base !important;
+    font-weight: 300;
+}
+
+// Apply Roboto Light to all heading elements
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300; // Weight for Roboto Light
+}
+
+html, body {
+    height: 100%;
+}
+
+main {
+    min-height: 100vh;
+    margin-left: 280px;
+}
+
+section {
+    display: block;
+    overflow: hidden;
+}
+
+.progress-bar {
+    /* Apply a transition to the width property, change 2s to the desired duration */
+    transition: width 2s ease;
+}
+
+
+// Title Card Logo on Main Page
+.title-img {
+    width: auto;
+    max-width: 100%;
+    max-height: 300px;
+}
+
+li {
+    margin-bottom: 10px; /* Adjust the value as needed */
+}
+
+.back-button {
+    position: fixed;
+    top: 16px; /* Adjust as needed */
+    left: 300px; /* Adjust as needed */
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: white;
+    padding: 25px 25px;
+    text-decoration: none;
+    line-height: 2;
+    font-size: 16px;
+    border-radius: 50%;
+    z-index: 1000; /* Ensure it sits above other content */
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+    color: white;
+}

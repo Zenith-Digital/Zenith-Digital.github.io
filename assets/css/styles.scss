@@ -4,45 +4,8 @@
 $header-bg-col: #111111;
 $font-family-base: 'Roboto', sans-serif;
 
-/* Apply Roboto font to all elements */
-body, h1, h2, h3, h4, h5, h6, p, a, button, input, select, textarea, .navbar, .dropdown, .modal, .carousel {
-    font-family: $font-family-base !important;
-}
 
-html, body {
-    height: 100%;
-}
-
-main {
-    min-height: 100vh;
-    margin-left: 280px;
-}
-
-section {
-    display: block;
-    overflow: hidden;
-}
-
-.progress-bar {
-    /* Apply a transition to the width property, change 2s to the desired duration */
-    transition: width 2s ease;
-}
-
-
-// Title Card Logo on Main Page
-.title-img {
-    width: auto;
-    max-width: 100%;
-    max-height: 300px;
-}
-
-li {
-    margin-bottom: 10px; /* Adjust the value as needed */
-}
-
-
-
-
+@import "main";
 @import "header-block";
 @import "fontawesome";
 @import "sidebar";
@@ -50,4 +13,5 @@ li {
 @import "roboto-font";
 @import "job-cards";
 @import "portfolio.scss";
-@import "footer"
+@import "footer";
+@import "aperture-files";

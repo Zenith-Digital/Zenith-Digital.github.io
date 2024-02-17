@@ -4,8 +4,6 @@ permalink: /marketplace/
 title: UE5 Marketplace
 ---
 
-
-
 <div class="container py-3 px-0">
 
     <div class="text-white">
@@ -13,41 +11,39 @@ title: UE5 Marketplace
         <h3 class="text-muted"> <a href="https://www.unrealengine.com/marketplace/en-US/profile/Aperture9" target="_blank" class=""> Unreal Marketplace </a></h3>
     </div>
 
+    {% for item in site.data.marketplace_items %}
+    <section class="my-4">
+        <div class="card bg-light border-0 shadow-sm h-100">
+            <div class="row no-gutters h-100 position-relative"> <!-- Add position-relative here -->
+                <div class="col-md-4">
+                    <!-- Picture -->
+                    <img src="{{ item.thumb_img }}" class="card-img-top" alt="{{ item.title }}">
+                    {% if item.depreciated %}
+                    <!-- Deprecated Banner -->
+                    <div class="deprecated-overlay">
+                        <span class="deprecated-text">DISCONTINUED</span>
+                    </div>
 
-{% for item in site.data.marketplace_items %}
-<div class="container px-0 my-4 py-2"> 
- 
-   <div class="card">
-     <div class="row no-gutters">
-   
-       <!-- Picture -->
-       <div class="col">
-         <img src="{{item.thumb_img}}" class="card-img" alt="...">
-         <ul class="list-unstyled d-flex">
-             <li class="w-100 me-1"> <a href="{{ item.store_link }}" class="w-100 btn btn-lg btn-primary my-1" target="_blank"> Store Page </a> </li>
-
-             {% if item.show_docs_link %}
-             <li class="w-100 ms-1">  <a href="{{ item.docs_link }}" class="w-100 btn btn-lg btn-primary my-1" target="_blank"> Documentation </a> </li>
-             {% endif %}
-         </ul>
-         
-        
-       </div>
-       
-       <!-- Body -->
-       <div class="col-md-8">
-         <div class="d-flex flex-column">
-           <h5 class="card-title"> {{ item.title }} </h5>
-           <p class="card-text"> {{ item.description }} </p>
-         </div>
-       </div>
-   
-     </div> <!--Close Row -->
-   </div>
- </div>
- {% endfor %}
-
-
-
-
+                    {% endif %}
+                </div>
+                <div class="col-md-8 d-flex flex-column">
+                    <!-- Body -->
+                    <div class="card-body">
+                        <h2 class="card-title my-0 py-2">{{ item.title }}</h2>
+                        <p class="card-text">{{ item.description }}</p>
+                    </div>
+                    <!-- Buttons -->
+                    <div class="card-footer bg-transparent border-0 mt-auto">
+                        <a href="{{ item.store_link }}" class="btn btn-primary my-1" target="_blank">Store Page <i class="bi bi-box-arrow-up-right"></i> </a>
+                        {% if item.show_docs_link %}
+                        <a href="{{ item.docs_link }}" class="btn btn-primary my-1">Documentation</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+    
+    
 </div> <!-- Master wrapper -->

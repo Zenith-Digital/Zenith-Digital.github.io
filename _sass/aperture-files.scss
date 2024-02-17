@@ -1,0 +1,21 @@
+.deprecated-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fades the image to dark */
+    z-index: 2; /* Above the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.deprecated-text {
+    color: white;
+    font-size: 68px; /* Adjust size as needed */
+    font-weight: bold;
+    transform: rotate(-45deg); /* Diagonal text */
+    text-align: center;
+    width: 150%; /* Ensures full coverage over the image */
+}

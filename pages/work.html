@@ -6,7 +6,7 @@ title: Zenith Digital - Work
 
 <section>
     <div class="container my-5">
-        <h2 class="mb-4">Daniel Orchard - Founder &amp; Developer at Zenith Digital</h2>
+        <!-- <h2 class="mb-4">Daniel Orchard - Founder &amp; Developer at Zenith Digital</h2>
         <div class="bg-light p-4 shadow-sm rounded">
             <h3 class="mb-3">A Foundation of Expertise</h3>
             <p class="lead">
@@ -16,16 +16,20 @@ title: Zenith Digital - Work
                 Although Zenith Digital is a newly established entity, it stands on the robust groundwork laid by years of my hands-on experience and innovative contributions to the industry.
             </p>
             <footer class="blockquote-footer">Daniel Orchard, <cite title="Founder's Background">Founder of Zenith Digital</cite></footer>
-        </div>
+        </div> -->
+
+        <h1> Past and Future Projects </h1>
 
         <div class="mt-4">
             <h3 class="fst-italic">Upcoming Projects</h3>
-            <p>While there are several exciting projects in the pipeline for Zenith Digital that we're eager to share, confidentiality commitments keep us from disclosing details at this moment.</p>
+            <p>While there are several exciting projects in the pipeline for Zenith Digital that we're eager to share,
+                confidentiality commitments keep us from disclosing details at this moment.</p>
         </div>
 
         <div class="mt-4">
-            <h3 class="fst-italic">Showcased Experience</h3>
-            <p>The projects highlighted below were undertaken by me prior to founding Zenith Digital. They illustrate the depth of experience and creative insight I bring to the company.</p>
+            <h3 class="">Showcased Experience</h3>
+            <p>The projects highlighted below were undertaken by me prior to founding Zenith Digital. They illustrate
+                the depth of experience and creative insight I bring to the company.</p>
         </div>
     </div>
 </section>
@@ -34,7 +38,7 @@ title: Zenith Digital - Work
 
 <section id="portfolio" class="portfolio">
 
-    <div class="text-center mb-4">
+    <div class="text-center mb-0 p-0">
         <div class="btn-group" role="group" aria-label="Portfolio filters">
             <button type="button" class="btn btn-outline-primary filter-button" data-filter="*">All</button>
             <button type="button" class="btn btn-outline-primary filter-button" data-filter=".game">Game</button>
@@ -43,13 +47,21 @@ title: Zenith Digital - Work
         </div>
     </div>
 
-
-    <div class=" py-5 text-center container">
+    <div class=" py-3 pb-4 text-center container">
         <div class="container">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 portfolio-container">
                 {% for case in site.data.cases %}
-                <div class="col mix {{ case.type }}">
-                    {% include jobcard.html title= case.title description=case.desc img=case.img %}
+                <div class="py-2 px-2 col mix {{ case.type }}">
+
+                    <div class="col">
+                        <div class="card overflow-hidden rounded-5 shadow-lg jobcard-image"
+                            style="background-image: url('/assets/img/portfolio/{{ case.img }}');">
+
+                            <div class="my-auto d-flex flex-column justify-content-center align-items-center jobcard-text">
+                                <h2 class="display-6 text-white mt-4 mb-4 fw-bold"> {{ case.title }} </h2>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 {% endfor %}
             </div>

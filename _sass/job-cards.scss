@@ -5,6 +5,14 @@
     background-position: center;
     transition: all 0.3s ease;
     position: relative;
+
+    // height: 400px !important; 
+}
+
+@media (max-width: 768px) {
+    .jobcard-image {
+        height: 200px; /* Shorter height on smaller screens */
+    }
 }
 
 .jobcard-image:before {

@@ -28,8 +28,10 @@ title: Zenith Digital - Work
 
         <div class="mt-4">
             <h3 class="">Showcased Experience</h3>
-            <p>The projects highlighted below were undertaken by me prior to founding Zenith Digital. They illustrate
-                the depth of experience and creative insight I bring to the company.</p>
+            <p>The portfolio below showcases a diverse range of projects, encompassing both individual endeavors while under employment with various companies (see <a href="/about-me/"> Daniel</a>) and collaborative efforts within Zenith Digital. 
+                These selections underscore the breadth of my experience and the innovative perspectives I contribute to our company.</p>
+
+                <p> Click on any project to learn more. </p>
         </div>
     </div>
 </section>
@@ -40,33 +42,68 @@ title: Zenith Digital - Work
 
     <div class="text-center mb-0 p-0">
         <div class="btn-group" role="group" aria-label="Portfolio filters">
-            <button type="button" class="btn btn-outline-primary filter-button" data-filter="*">All</button>
-            <button type="button" class="btn btn-outline-primary filter-button" data-filter=".game">Game</button>
-            <button type="button" class="btn btn-outline-primary filter-button" data-filter=".misc">Misc</button>
-            <button type="button" class="btn btn-outline-primary filter-button" data-filter=".film-tv">Film/TV</button>
+            <button type="button" class="btn btn-outline-primary filter-button" data-mixitup-control data-filter="*">All</button>
+            <button type="button" class="btn btn-outline-primary filter-button" data-mixitup-control data-filter=".film-tv">Film/TV</button>
+            <button type="button" class="btn btn-outline-primary filter-button" data-mixitup-control data-filter=".game">Gaming</button>
+            <button type="button" class="btn btn-outline-primary filter-button" data-mixitup-control data-filter=".misc">Misc</button>
         </div>
     </div>
 
-    <div class=" py-3 pb-4 text-center container">
-        <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 portfolio-container">
-                {% for case in site.data.cases %}
-                <div class="py-2 px-2 col mix {{ case.type }}">
-
-                    <div class="col">
-                        <div class="card overflow-hidden rounded-5 shadow-lg jobcard-image"
-                            style="background-image: url('/assets/img/portfolio/{{ case.img }}');">
-
-                            <div class="my-auto d-flex flex-column justify-content-center align-items-center jobcard-text">
-                                <h2 class="display-6 text-white mt-4 mb-4 fw-bold"> {{ case.title }} </h2>
-                            </div>
+<!-- Cards structure -->
+<div class="py-3 pb-4 text-center container">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 portfolio-container">
+            {% for case in site.data.cases %}
+            <a href="#" class="py-2 px-2 col mix {{ case.type }} card-trigger" 
+                data-trigger="modal" 
+                data-title="{{ case.title | escape }}" 
+                data-desc="{{ case.desc}}" 
+                data-img="/assets/img/portfolio/{{ case.img }}"
+                style="text-decoration: none; color: inherit;">
+                <div class="col">
+                    <div class="card overflow-hidden rounded-5 shadow-lg jobcard-image"
+                        style="background-image: url('/assets/img/portfolio/{{ case.img }}');">
+                        <div class="my-auto d-flex flex-column justify-content-center align-items-center jobcard-text">
+                            <h2 class="display-6 text-white mt-4 mb-4 fw-bold"> {{ case.title }} </h2>
                         </div>
                     </div>
                 </div>
-                {% endfor %}
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal Title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row"> <!-- Row for image and description -->
+                    <div class="col-md-6"> <!-- Column for the image -->
+                        <img src="" class="img-fluid" alt="Case Image" id="modal-image">
+                    </div>
+                    <div class="col-md-6"> <!-- Column for the description -->
+                        <p id="modal-description">Description here</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
+</div>
+
+  
+  
+  
 
 
 </section>
+
+<script src="/assets/js/modal.js"> </script>

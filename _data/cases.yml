@@ -1,11 +1,58 @@
+# types = game, film-tv, misc
+# do NOT include speech marks as it breaks the layout due to how we ues JS to read it
+
+- title: Performance Laboratory (Royal College of Music)
+  img: rcm-lab.jpg
+  link: 
+  role: Lead Technical Developer
+  desc: >
+    <p> As the Lead Developer, my primary objective was to architect and implement a modular and scalable framework tailored for dynamic show production. This project demanded seamless integration with a variety of external devices, including DMX lighting systems, QLab for audio playback and triggering, sophisticated user-interface interactions, and feedback mechanisms from external software, alongside managing multi-projection mapped outputs. </p>
+    <p> The resulting product stands out for its reliability and robustness, eliminating the need for on-site support. It is designed to be both powerful and flexible, catering to a wide range of use cases. A notable feature is its capability to simulate large audience crowds within realistic or virtual venues. It offers dynamic audience responses that can alter mood, react to user inputs, execute disruptions, and exhibit diverse behaviors, ensuring no two runs are the same. This tool redefines audience simulation, providing an immersive experience tailored to the specific needs of each presentation. </p>
+
+  type: misc
+  by-zd: true
+
+- title: Chaos Castle (Super Strange Studios)
+  img: chaos-castle.jpg
+  role: Lead Technical Developer
+  link: 
+  desc: >
+    <p> In this venture, I spearheaded the development of an innovative framework alongside world-building features that empower end-users to craft dynamic and captivating worlds. The design ethos was centered around emulating the tactile sensation of sculpting with clay or plasticine, resulting in a strong and inviting aesthetic that resonates well with younger audiences. </p> 
+    <p> Beyond the realm of sculpting, I devised tools for integrating props and set decorations, complemented by a comprehensive saving and loading mechanism. This allows users not only to share their creations but also to revisit and refine them over time. </p>
+    <p> A notable innovation within this project was the development of a pattern-matching system. This system abstracts our world grid into unique pattern signatures. Through manual training, we enable the automatic assignment of meshes based on their designated patterns. With specialized teaching tools, we successfully trained the system to recognize over 3,000 unique patterns and shapes, streamlining the world-building process significantly. </p>
+  type: game
+  by-zd: true
+
+- title: Tennis (Software Integration)
+  img: EurosportTennis.jpg
+  comp: Discovery / Eurosport Team UK
+  role: Solutions Engineer - Pipeline
+  link: #
+  desc: >
+    <p>In this project, I was tasked with the implementation of the Hawkeye dataset. This involved developing custom C++ code to efficiently read, parse, and analyze the dataset. My role extended to the creation of sophisticated visualization tools, designed to automatically generate visuals that not only accurately represent the data but do so in an aesthetically pleasing and consistent manner.</p>
+    <p>Given its application in live broadcasting, the system was engineered from the ground up to prioritize maximum reliability and operational safety. To complement this robust backend, I developed intuitive user interfaces that enable operators to manage the system seamlessly. These UIs were carefully designed to streamline the operational process, ensuring that all essential features were easily accessible, thereby enhancing the overall user experience and efficiency.</p>
+  type: film-tv
+  by-zd: true
+
 - title: Game of Thrones (Season 7 - 8)
   img: got8.jpg
   link: https://www.imdb.com/- title/tt0944947/
+  desc: >
+      <p> On Game of Thrones (Season 8), I designed and produced virtual production tools, mainly utilising VR, for previsualisation and shot-planning, 
+      used for the more complex scenes, the primary tool being <a href=https://pathfinder.thethirdfloorinc.com/> Pathfinder</a>,
+      which allows you to both both scout locations and to plan camera shots. </p>
+      Epic Games has created a excellent write-up of our work which you can read here:
+      <br>
+      <br>
+      <a href=https://www.unrealengine.com/en-US/spotlights/virtual-production-on-the-battlegrounds-of-game-of-thrones>  Game of Thrones Previs using Unreal Engine</a>
   type: film-tv
 
 - title: The Mandolorian (Season 2)
   img: MandoSeason2.jpg
   link: #
+  desc: >
+        <p> The Mandolorian TV series used substantial amounts of virtual production in the development. My role was to working as a Pipeline TD, to develop tools and features for Unreal Engine and it's use for Mando VP. </p>
+        <p> In particular, a focus on C++ support and expansion of the Python API to integrate core Maya tools into the new Unreal Engine workflow. </p>
   type: film-tv
 
 - title: Avengers 2 - Age Of Ultron
@@ -13,6 +60,8 @@
   comp: The Imaginarium Studios
   role: Technical Director
   link: #
+  desc: >
+      On Avengers 2 I was the P-Cap operator for a capture stage in Shepperton Studios, where I captured principal cast and stunt-work.
   type: film-tv
 
 - title: Mowgli - Legend of the Jungle
@@ -20,34 +69,19 @@
   comp: The Imaginarium Studios
   role: Technical Director
   link: #
+  desc: >
+      Mowgli made heavy use of Unreal Engine for both previsualisation and realtime  display of performance capture. 
+      I created digital sets, mapped digital avatars to performers, and produce rushes of the shoots. This was performed both in studio and on location.
   type: film-tv
 
-- title: Final Fantasy - Kingsglaive
-  img: Kingsglaive.jpg
-  comp: The Imaginarium Studios
-  role: Technical Director
-  link: #
-  type: film-tv
 
 - title: Star Wars - Episode 7
   img: StarWars7.jpg
   comp: The Imaginarium Studios
   role: Technical Director
   link: #
-  type: film-tv
-
-- title: The Ritual
-  img: Ritual.jpg
-  comp: The Imaginarium Studios
-  role: Technical Director
-  link: #
-  type: film-tv
-
-- title: Dawn Of The Planet Of The Apes
-  img: film_apes.jpg
-  comp: The Imaginarium Studios
-  role: Technical Director
-  link: #
+  desc: >
+        For Star Wars I worked in studio and on location as motion capture technician, and I also worked on location as IBC capture operator
   type: film-tv
 
 - title: Jingle Jangle
@@ -55,60 +89,117 @@
   comp: The Third Floor Inc.
   role: Pipeline Technical Director
   link: #
+  desc: >
+        On Set Work, alongside the NCam Realtime team, to bring Motion Capture and N-Cam together 
   type: film-tv
-  
+
+- title: The Ritual
+  img: Ritual.jpg
+  comp: The Imaginarium Studios
+  role: Technical Director
+  link: #
+  desc: >
+      For the Ritual I used Unreal Engine to build previs scenes to help plan the capture of more difficult shots, 
+      these were then used with performance capture digital sets for character motion development for the digital avatar of the monster (All in Unreal).
+  type: film-tv
+
+- title: Dawn Of The Planet Of The Apes
+  img: film_apes.jpg
+  comp: The Imaginarium Studios
+  role: Technical Director
+  link: #
+  desc: >
+        For Apes 2, my work was based around the various pick-ups in performance capture for Andy Serkis.
+  type: film-tv
+
 - title: Beijing Olympics 2022
   img: Olympics22.png
   comp: Discovery / Eurosport Team UK
   role: Freelance Pipeline Developer
   link: #
+  desc: >
+    <p> I created a system for placing background npcs into any project, inc mocap import and retargetting, seeded randomised characters, 
+    outfits and animations, with a focus to bring the digital sets to life. 
+    This system has since been reused in other projects and easily adapted to new use cases. </p>
   type: film-tv
-
-- title: Tennis (Software Integration)
-  img: EurosportTennis.jpg
-  comp: Discovery / Eurosport Team UK
-  role: Freelance Pipeline Developer
-  link: #
-  type: film-tv
+  by-zd: true
 
 - title: Star Citizen - Squadren 42
   img: Squadren42.jpg
   comp: The Imaginarium Studios
   role: Technical Director
   type: game
+  desc: >
+    Star Citizen's Squadren 42 was a very large project for me, taking place over two years. My role was to drive and manage the realtime visualisation. Since this was (at the time) a CryEngine game, the realtime was all performed in CryEngine, in the actual game client. 
+    This allowed our realtime to closely reflect the end-result.
 
 - title: Planet of the Apes - Last Frontier
   img: apes.jpg
   comp: The Imaginarium Studios
   role: Technical Director
   type: game
+  desc: >
+      On the last frontier I created the inital pitchvis in Unreal Engine, which was a complete scene with lighting, motion capture, and characters.
+      Later in development I also helped with marketing material, in particular R&D into new mediums of delivery, such as 360 and VR.
 
 - title: Battlefield 1 
   img: battlefield1.jpg
   comp: The Imaginarium Studios
   role: Technical Director
   type: game
+  desc: >
+    Performance Capture, data cleanup and pipeline development
 
 - title: Mad Factory VR
   img: MadFactory.jpg
   comp: The Third Floor Inc.
   role: Pipeline Technical Director
   type: game
+  desc: >
+    <p> Mad Factory VR is a fun VR game built for an arcade type gameplay. I acted as a Unreal Engine consultant for the project and assisted the immsersive team with the core game logic and VR best-practices. 
+  
 
 - title: The Tempest
   img: Tempest.jpg
   comp: The Imaginarium Studios
   role: Technical Director
   type: misc
+  desc: >
+    <p> 
+      The Tempest was a massive project for me where performance capture was merged with traditional stage show control to produce a realtime avatar, driven live on stage, and controlled through external tools over network languages, mainly DMX, OSC, and PSN </p>
+    </p>  
+    I created the Unreal project and merged all the elements together, including all the state logic, visual changes, and materials and particle fx.
+    
+    <ul>
+      <li> Write-up by Epic: <a href=https://www.unrealengine.com/en-US/blog/unreal-engine-brings-virtual-character-to-life-onstage-in-the-royal-shakespeare-companys-the-tempest _target=blank> Unreal Engine Brings Virtual Character to Life Onstage in The Royal Shakespeare Company’s The Tempest </a></li>
+      <li> White Paper on the Mocap Employed <a href=&quot;https://cdn2.unrealengine.com/Unreal+Engine%2Fperformance-capture-whitepaper-final%2FUnreal-Engine_performance-capture-whitepaper_LPC_Whitepaper_final-7f4163190d9926a15142eafcca15e8da5f4d0701.pdf&quot; target=&quot;_blank&quot;> Choosing a real-time performance capture system </a> </li>
+    </ul>
 
 - title: Coldplay - Adventures of a Lifetime
   img: cp1.jpg
   comp: The Imaginarium Studios
   role: Technical Director
   type: misc
+  desc: >
+    <p> Performance Capture </p>
+
+- title: Final Fantasy - Kingsglaive
+  img: Kingsglaive.jpg
+  comp: The Imaginarium Studios
+  role: Technical Director
+  link: #
+  type: film-tv
+  desc: >
+      On Kingsglaive I alternated between work as a performance capture operator, and as the realtime operator using motion builder.
 
 - title: Dream
   img: Dream.jpg
   comp: The Royal Shakespeare Company
   role: Lead Developer
   type: misc
+  by-zd: true
+  desc: >
+    <p> <a href=https://dream.online/ _target=blank> Dream Website </a> </p>
+    <p> Role: Lead Developer </p>
+    <p> Dream is an online production performed live at Portsmouth Guildhall in March 2021. 
+    The production combined the latest gaming and theatre technology to create a shared experience between audiences and actors, and featured an interactive symphonic soundtrack. </p>

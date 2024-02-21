@@ -15,7 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize MixItUp for the .portfolio-container if it exists
     var container = document.querySelector('.portfolio-container');
     if (container) {
-        var mixer = mixitup(container);
+        var mixer = mixitup(container, {
+            selectors: {
+                // Use 'data-mixitup-control' to avoid conflicts with Bootstrap
+                control: '[data-mixitup-control]'
+            }
+        });
     }
 
     // Initialize AOS

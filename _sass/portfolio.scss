@@ -115,3 +115,14 @@ ul {
     margin-right: calc(-.5 * var(--bs-gutter-x));
     margin-left: calc(-.5 * var(--bs-gutter-x));
 }
+
+.custom-modal {
+  min-width: 100%;
+  min-height: 300px;
+}
+
+@media (min-width: 768px) {
+  .custom-modal {
+      min-width: 600px; /* Larger size for wider screens */
+  }
+}

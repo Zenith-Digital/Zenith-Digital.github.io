@@ -49,7 +49,7 @@
   thumb_img: /assets/img/mp/bridges/RopeBridge_Thumb.png
   depreciated: false
   show_demo_link: true
-  demo_link: #
+  demo_link: https://drive.google.com/file/d/1DSRjjDEVFFiFbyAQrTTwrJGLSJ-D1nl5/view?usp=sharing
 
 - title: In Game Log Display
   description:    <p> If your like me, you love developing in VR, but really dislike having to take the headset off to check the log, or squinting at the in-game console, this may be the plugin for you. In response to this frustration, here is the VR Log. <p>

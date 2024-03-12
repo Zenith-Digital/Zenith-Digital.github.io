@@ -12,10 +12,18 @@ permalink: /MP-RopeBridges/
             optimized for performance </h3>
     </div>
 
+    {% for item in site.data.marketplace_items %}
+    {% if item.title == "Dynamic Responsive Rope Bridges" %}
+        <a role="button" class="btn btn-primary p-2 text-light" href="{{store_link}}"> Store Page </a>
+        <a role="button" class="btn btn-primary p-2 text-light" href="{{item.demo_link}}"> Download Demo </a>
+    {% endif %}
+    {% endfor %}
+
+    <div class="py-2">
+
+    </div>
 
     <section>
-
-
         <!-- Promo Image carousel -->
         <div id="productCarousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -40,6 +48,10 @@ permalink: /MP-RopeBridges/
                 <span class="sr-only">Next</span>
             </a>
         </div>
+    </section>
+
+    <section class="py-4">
+        <h3> Youtube videos coming soon </h3>
     </section>
 
     <section class="py-4">

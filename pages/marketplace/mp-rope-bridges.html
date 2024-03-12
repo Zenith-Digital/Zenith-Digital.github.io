@@ -1,0 +1,127 @@
+---
+layout: default
+title: Rope Bridges Documentation
+permalink: /MP-RopeBridges/
+---
+
+<div class="container pb-4">
+
+    <div class="text-center pb-4">
+        <h1 class="pb-0"> Dynamic Rope Bridges</h1>
+        <h3 class="pt-0"> Dynamic rope bridge, responsive to players and environment. Modular, easily customizable, and
+            optimized for performance </h3>
+    </div>
+
+
+    <section>
+
+
+        <!-- Promo Image carousel -->
+        <div id="productCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                {% for i in (1..7) %}
+                {% assign image_number = i | prepend: '0' | slice: -2, 2 %}
+                {% assign image_path = "/assets/img/mp/bridges/RopeBridge_Promo_" | append: image_number | append:
+                ".png" %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <a data-fancybox="gallery" href="{{ image_path }}">
+                        <img src="{{ image_path }}" class="d-block w-100" alt="Rope Bridge Promo {{ image_number }}">
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+
+            <a class="carousel-control-prev" href="#productCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#productCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="py-4">
+        <p>
+            Introducing the Dynamic Rope Bridge, a revolutionary digital asset that dynamically responds to players,
+            environmental elements like wind, and objects on its path. Designed for versatility, it&#39;s modular,
+            allowing customization in length and appearance
+            with any meshes. It&#39;s optimized for high performance, with a special sleep system for enhanced
+            efficiency.
+            Easy to integrate, it comes as a single drag-and-drop blueprint. Discover more through our overview video
+            and a
+            detailed tutorial on customizing
+            meshes, perfect for adding interactive elements to your game environments.</p>
+
+        <h2>Features: </h2>
+        <ul>
+            <li> Ready to use, Drag-And-Drop, customise your details, and done. </li>
+            <li> Dynamic response to players or objects, looks organic and realistic when you run across it.</li>
+            <li> Optional wind system to add additional movement, at a small performance cost. </li>
+            <li>Optimised as much as possible, just 1 single physics component, the rest is ISMs, spline meshes, or
+                static meshes. </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2> How to Use </h2>
+
+        <p> Install the pack from the Unreal Engine Marketplace. </p>
+        <p> In the content browser, navigate to RopeBridges/Blueprints, and drag the Rope Bridge blueprint into your
+            world </p>
+        <p> With the blueprint selected in the world outliner, position it on the start of your bridge, then select the
+            3D Vector widget (purple diamond), and move that to the end of your bridge </p>
+
+        <div class="alert alert-info">
+            <p> Not all elements of the bridge will draw in editor. The bridge only supports physics and some other
+                features in runtime </p>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="/assets/img/mp/bridges/RopeBridge_DetailsPanel.png" class="img-fluid"
+                        alt="Rope Bridge Details Panel">
+                </div>
+                <div class="col-md-6">
+                    <p> The details panel has the most common attributes to customise. Most of these have tooltips that
+                        will explain more when you mouse over them.</p>
+                    <p> Drop down the Posts and Ropes section to customise those elements. </p>
+                </div>
+            </div>
+        </div>
+
+        <h2> Mesh Customisation </h2>
+
+        <p>
+        <ul>
+            <li> Bridge Slats - These can be customised in the details panel, and supports random meshes. Add one or
+                more meshes to <code>Bridge Mesh Slat List</code>.
+                The bridge is X forward, so on a bridge slat, the Y axis would point down the board.
+
+                <div class="alert alert-info">
+                    <p>You can easily use the modelling tools in UE5 to re-orient your axis:
+                        Drag your mesh into the world, zero its transform, rotate 90 in Z so its correctly orientated
+                        for bridge, then use the modelling tools - "BakeRS" tool to burn that 90 rotation into the mesh.
+                    </p>
+                </div>
+            </li>
+            <li>Posts - These can be set directly in the detail panel. Their position matches the lower rope offsets.
+                They use a <code>Instanced Static Mesh Component</code>, so your material will need that added to its
+                usage if it shows up untextured. </li>
+            <li>Rope - The rope is set within blueprint, and is not exposed currently. This is because it uses a Spline
+                Mesh Component, so its ideal to stick with the 1cm_Tube mesh used. If you want to customise it, or swap
+                its materials, open the
+                <code> Update Rope</code> function (the singular, not Update Ropes). In that function is the
+                <code> Add Spline Mesh Component </code> node, select that, and override as needed.
+                Remember if you change material, your new material will need its usage updated to include "Spline Mesh
+                Component" in the material editor.
+            </li>
+        </ul>
+        </p>
+
+    </section>
+
+
+</div>

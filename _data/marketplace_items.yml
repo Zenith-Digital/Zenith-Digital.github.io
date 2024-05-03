@@ -8,6 +8,15 @@
   docs_link:  /MP-HexGrids/
   thumb_img: /assets/img/mp/HexGrids.png
 
+- title: UMG Subtitles
+  description:  <p class="card-text"> The UMG Subtitle Hook plugin utilizes the native subtitle system, but instead of it being rendered via slate with very little control over font, size and colour, this reroutes the final subtitle into 2 UMG components - a SubtitleTextBlock, and a SubtitleRichTextBlock. This lets you better customize the subtitles to provide better control and readability. </p>
+                <p class="card-text"> The system is drag and drop, just add a SubtitleTextBlock into your hud, and use subtitles as normal. </p>
+                <p class="card-text"> As we are leveraging the native subtitle system, if your not already familiar, you should read up on how they work with dialogue waves etc. A working example widget is provided using RichText in the plugins content folder. (Content Browser > View Options > Enable Plugins & Engine Content, then navigate to SubtitleHookUMG folder) </p>
+  store_link: https://www.unrealengine.com/marketplace/en-US/product/native-subtitles-into-umg
+  show_docs_link: true
+  docs_link:  /MP-UMG-Subtitles/
+  thumb_img: /assets/img/mp/UMGSubtitles.png
+
 - title: Ultimate RTS Camera
   description:    <p> The Ultimate RTS Camera is a full featured camera system for RTS style games. It supports dynamic detection between keyboard and gamepad, with fully support for each. </p> 
                   <p> It also includes mobile support, including drag, pinch and zoom, and 2 finger rotate. </p> 

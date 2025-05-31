@@ -8,7 +8,7 @@
   icon: <i class="bi bi-person"></i>
   is_header: false
 
-- title: Past Projects
+- title: Portfolio
   url: '/work/'
   icon: <i class="bi bi-file-earmark"></i>
   is_header: false

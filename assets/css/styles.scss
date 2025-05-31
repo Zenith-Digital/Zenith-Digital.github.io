@@ -1,16 +1,13 @@
----
----
-
 $header-bg-col: #111111;
 $font-family-base: 'Roboto', sans-serif;
 
-@import "main";
-@import "header-block";
-@import "fontawesome";
-@import "sidebar";
+@import "../../_sass/main";
+@import "../../_sass/header-block";
+@import "../../_sass/fontawesome";
+@import "../../_sass/sidebar";
 @import "bootstrap-icons.css";
-@import "roboto-font";
-@import "job-cards";
-@import "portfolio.scss";
-@import "footer";
-@import "aperture-files";
+@import "../../_sass/roboto-font";
+@import "../../_sass/job-cards";
+@import "../../_sass/portfolio.scss";
+@import "../../_sass/footer";
+@import "../../_sass/aperture-files";

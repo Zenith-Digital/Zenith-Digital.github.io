@@ -1,3 +1,12 @@
+.jobcard {
+    width: 300px; /* Set a fixed width for all cards */
+    height: 400px; /* Set a fixed height for all cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px; /* Add spacing between cards */
+}
 
 .jobcard-image{
     background-repeat: no-repeat;
@@ -5,6 +14,8 @@
     background-position: center;
     transition: all 0.3s ease;
     position: relative;
+    width: 100%;
+    height: 70%; /* Adjust height relative to card */
 
     // height: 400px !important; 
 }
@@ -35,12 +46,14 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    width: 100%;
+    height: 30%; /* Adjust height relative to card */
 }
 
 .jobcard-text h2 {
     font-size: 1.5rem; /* Adjust this value as needed */
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 5px; /* Reduce space below the title */
     text-align: center; /* Ensure text is centered */
     color: white; /* Text color */
     font-weight: bold; /* Font weight */
@@ -48,6 +61,10 @@
     justify-content: center;
     line-height: 1.2;
 
+}
+
+.jobcard-text h3 {
+    margin-top: 5px; /* Reduce space above the company name */
 }
 
 .jobcard-image:hover .jobcard-text {
@@ -61,5 +78,5 @@
 }
 
 .jobcard-image:hover:before {
-    background: rgba(0, 0, 0, 0.5); /* Darken the image by 50% */
+    background: rgba(0, 0, 0, 0.75); /* Darken the image by 75% */
 }

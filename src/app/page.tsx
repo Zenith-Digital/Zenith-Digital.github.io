@@ -21,7 +21,7 @@ const featuredProjects = [
   {
     title: 'NOOR Toolkit',
     client: 'Proteus',
-    image: '/images/portfolio/noor.png',
+    image: '/images/portfolio/noor_art.png',
     description: 'NOOR is a collaborative visualisation tool by Proteus that enables multi-user, multi-location review and live editing of 3D projects within shared extended-reality environments. It integrates with existing DCC pipelines and supports world-scaling from tabletop models to full-scale spaces, enabling seamless collaboration across devices without specialist training.',
     role: "I acted as the overall technical architect and lead developer, designing and building the core Unreal Engine framework that underpins NOOR. This included a bespoke multiplayer architecture with EOS-backed global connectivity, session hosting and reconnection, alongside robust XR best-practice systems enabling seamless collaboration across devices, scales and locations.",
 
@@ -257,4 +257,3 @@ export default function Home() {
     </main>
   );
 }
-

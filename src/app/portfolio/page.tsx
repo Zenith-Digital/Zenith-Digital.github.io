@@ -5,7 +5,7 @@ export default function Portfolio() {
       {
       title: 'NOOR',
       client: 'Proteus',
-      image: '/images/portfolio/noor_Art.png',
+      image: '/images/portfolio/noor_art.png',
       description: 'Research & development on NOOR, a multi-platform Unreal Engine toolkit designed for real-time collaboration across VR, AR, and desktop. Implemented custom multiplayer framework supporting session hosting, reconnection logic, and seamless interaction across devices.',
       highlights: [
         'Multi-platform XR toolkit for real-time collaboration',

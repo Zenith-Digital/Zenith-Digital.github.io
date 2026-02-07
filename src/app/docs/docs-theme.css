@@ -1,0 +1,48 @@
+.docs-theme .bg-gray-900 {
+  background-color: var(--canvas) !important;
+}
+
+.docs-theme .bg-gray-800,
+.docs-theme .bg-gray-800\/50 {
+  background-color: var(--surface) !important;
+}
+
+.docs-theme .bg-gray-900\/50,
+.docs-theme .bg-gray-700,
+.docs-theme .bg-gray-600 {
+  background-color: var(--surface-2) !important;
+}
+
+.docs-theme .border-gray-700,
+.docs-theme .border-gray-800,
+.docs-theme .border-blue-400\/30 {
+  border-color: var(--line) !important;
+}
+
+.docs-theme .text-gray-300,
+.docs-theme .text-gray-400 {
+  color: var(--muted) !important;
+}
+
+.docs-theme .text-blue-300,
+.docs-theme .text-blue-400 {
+  color: var(--accent-strong) !important;
+}
+
+.docs-theme .bg-blue-600 {
+  background-color: var(--accent) !important;
+  color: #041319 !important;
+}
+
+.docs-theme .bg-blue-600\/20 {
+  background-color: var(--glow) !important;
+}
+
+.docs-theme .hover\:bg-blue-700:hover {
+  background-color: var(--accent-strong) !important;
+  color: #041319 !important;
+}
+
+.docs-theme .hover\:bg-gray-600:hover {
+  background-color: var(--surface) !important;
+}

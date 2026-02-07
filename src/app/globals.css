@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+:root {
+  --canvas: #0a0d12;
+  --ink: #f5f7fa;
+  --muted: #a7b0bf;
+  --accent: #5de4ff;
+  --accent-strong: #9cf8ff;
+  --surface: #111722;
+  --surface-2: #151c29;
+  --line: #1f2735;
+  --glow: rgba(93, 228, 255, 0.18);
+}
+
+body {
+  background-color: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-body), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), ui-serif, "Georgia", serif;
+}
+
+::selection {
+  background: rgba(199, 166, 111, 0.3);
+  color: var(--ink);
+}

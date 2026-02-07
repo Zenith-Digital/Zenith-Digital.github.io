@@ -1,0 +1,18 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0c0a" />
+      <stop offset="100%" stop-color="#1d1b16" />
+    </linearGradient>
+    <radialGradient id="glow" cx="0.2" cy="0.2" r="0.8">
+      <stop offset="0%" stop-color="#c7a66f" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#c7a66f" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)" />
+  <rect width="1200" height="800" fill="url(#glow)" />
+  <circle cx="940" cy="180" r="140" fill="#c7a66f" fill-opacity="0.08" />
+  <circle cx="240" cy="640" r="200" fill="#c7a66f" fill-opacity="0.06" />
+  <text x="50%" y="48%" text-anchor="middle" fill="#f4f1ea" font-family="Georgia, serif" font-size="64" letter-spacing="4">Mozfest</text>
+  <text x="50%" y="58%" text-anchor="middle" fill="#b7b0a4" font-family="Arial, sans-serif" font-size="24" letter-spacing="6">IMAGE TBC</text>
+</svg>
